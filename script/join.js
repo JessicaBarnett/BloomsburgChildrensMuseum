@@ -22,22 +22,27 @@
 	var state = document.getElementById("state");
 	var zip = document.getElementById("zip");
 
+	var thankYou = document.getElementById("thankYouMessage");
+
 	hideAll();
 
 	function hideAll(){
 		cardInfo.style.display="none";
 		checkInfo.style.display="none";
 		billAddress.style.display="none";
+		thankYou.style.display="none";
 	}
 
 	function showCardStuff(){
 		checkInfo.style.display="none";
 		cardInfo.style.display="block";
+		thankYou.style.display="block";
 	}
 
 	function showCheckStuff(){
 		checkInfo.style.display="block";
 		cardInfo.style.display="none";
+		thankYou.style.display="block";
 	}
 
 
@@ -59,7 +64,6 @@
 			diffBillAddress();
 		}
 		showBillAddress();
-		console.log("toggled");
 	}
 
 
@@ -68,14 +72,19 @@
 	}
 
 	function sameBillAddress(){
-		billAddress1.placeholder = address1.value;
-		billAddress2.placeholder = address2.value;
-		billCity.placeholder = city.value;
-		billState.placeholder = state.value;
-		billZip.placeholder = zip.value;
+		billAddress1.value = address1.value;
+		billAddress2.value = address2.value;
+		billCity.value = city.value;
+		billState.value = state.value;
+		billZip.value = zip.value;
 	}
 
 	function diffBillAddress(){
+		billAddress1.value = "";
+		billAddress2.value = "";
+		billCity.value = "";
+		billState.value = "";
+		billZip.value = "";
 		billAddress1.placeholder = "address 1";
 		billAddress2.placeholder = "address 2";
 		billCity.placeholder = "city";

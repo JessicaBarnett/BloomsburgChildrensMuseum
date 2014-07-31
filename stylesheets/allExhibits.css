@@ -1,0 +1,66 @@
+
+div#game{
+	overflow: hidden;
+}
+
+div#contentHead{
+	background-color: rgb(253, 180, 38);
+	border-radius: 15px;
+}
+
+#contentHead h1{
+	background-color: transparent;
+	margin-bottom: .2rem;
+	padding-left: 28%;
+	font-size: 3rem;
+	color: white;
+	text-align: left;
+}
+
+a.btn {
+	background-color: rgb(59, 98, 237);
+	margin-top: .5rem;
+	padding-top: .4rem;
+}
+
+a.btn:hover{
+	background-color: rgb(147, 166, 236);
+}
+
+#contentTwo, #contentOne{
+	background-color: rgb(253, 180, 38);
+	border-radius: 15px;
+}
+
+#contentOne{
+	height: 30rem;
+}
+
+#contentOne div#game{
+	background-color: blue;
+	overflow: hidden;
+	height: 26rem;
+	border-radius: 15px;
+	margin: 2rem 3.5%;
+	width: 72%;
+	min-width: 850px;
+	max-width: 980px;
+	/*game is absolutely positioned.  parent (a div sized with the grid) is not, so I have to set the width here.*/
+}
+
+#contentTwo div div.description{
+	background-color: white;
+	border-radius: 15px;
+	padding: 1rem;
+	margin: 2.3rem 5% 2.3rem 0;
+}
+
+
+#contentTwo figure img {
+	width: 80%;
+	margin: 2.3rem 10% 0 10%;
+	border-radius: 15px;
+	-webkit-transform: rotate(-10deg) translate(.5rem, 0rem) scale(1.3);
+	-moz-transform: rotate(-10deg) translate(.5rem, 0rem) scale(1.3);
+	transform: rotate(-10deg) translate(.5rem, 0rem) scale(1.3);
+}

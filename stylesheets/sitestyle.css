@@ -84,7 +84,7 @@ nav ul li:nth-of-type(4){
 }
 
 nav ul li:nth-of-type(5){
-	background-color: rgb(255, 253, 67);
+	background-color: rgb(67, 172, 255);
 	font-size: 1.6rem;
 }
 
@@ -110,7 +110,7 @@ nav ul li:nth-of-type(4):hover{
 }
 
 nav ul li:nth-of-type(5):hover{
-	background-color: rgb(251, 250, 163);
+	background-color: rgb(147, 207, 253);
 }
 nav ul li:nth-of-type(6):hover{
 	background-color: rgb(255, 142, 249);
@@ -138,18 +138,23 @@ nav ul li:nth-of-type(6):hover{
 h1, h2, h3, h4, h5, em {
 	font-family: "margarine";
 	font-size: 2rem;
-	letter-spacing:.25rem;
+	letter-spacing:.1rem;
 	color: rgb(253, 180, 38);
 }
 
-.contentHead h1{
+em{
+	font-size: 1.7rem;
+	line-height: 2.3rem;
+	letter-spacing:.09rem;
+}
+
+#contentHead h1{
 	background-color: rgb(253, 180, 38);
 	padding: 1%;
 	font-size: 3rem;
 	color: white;
 	text-align: center;
 }
-
 
 p {
 	line-height: 1.25rem;
@@ -190,7 +195,7 @@ p {
 
 #allContent>.container
 {
-	margin-top: 3rem;
+	margin-top: 1.8rem;
 }
 
 #allContent figure figcaption h1, 
@@ -209,12 +214,16 @@ p {
 }
 
 /*-------END FIGURE STYLES------*/
+
+
 /*----------BUTTON STYLE--------*/
 a.btn {
 	background-color: rgb(104, 222, 80);
 	border-radius: 15px;
 	text-decoration: none;
 	font-size: 1.25rem;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 a.btn:hover{
@@ -222,6 +231,39 @@ a.btn:hover{
 }
 
 /*-------END BUTTON STYLE-------*/
+
+
+/*-------LIST STYLE--------*/
+
+#allContent ul {
+	margin-bottom: 2rem;
+}
+
+#allContent ul li{
+	background: url(../images/starBullet.png) no-repeat;
+	background-size: 1.3rem 1.3rem;
+	margin-left: 5%;
+	padding-left: 14px;
+}
+
+
+
+/*-------END LIST STYLE--------*/
+
+
+/*-------DATALIST STYLE--------*/
+dl dt{
+	margin: 1rem 0 .8rem 3%;
+	font-size: 1.3rem;
+}
+
+dl dd{
+	margin: .5rem 0 1.3rem 8%;
+	line-height: 1.2rem;
+}
+
+/*-------END DATALIST STYLE--------*/
+
 
 /*----------FORM STYLE--------*/
 
@@ -241,7 +283,8 @@ input[type="radio"]{
 
 label{
 	float: left;
-	font-size: 2rem;
+	font-size: 1.8rem;
+	padding-top: .5rem;
 	margin-right: 3%;
 }
 

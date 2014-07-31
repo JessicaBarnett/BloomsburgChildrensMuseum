@@ -10,7 +10,7 @@
 }
 
 #billingAddress fieldset input[name^="billAddress"], #cardInfo fieldset input[type="text"]{
-	width: 70%;
+	width: 65%;
 }
 
 #recycleAddress p, #paymentMethod p, #mailInfo p{
@@ -31,7 +31,7 @@ div#thankYouMessage.container{
 div#thankYouMessage.container em {
 	color: white;
 }
-#allContent>.container:nth-child(2n+2){
+#allContent>.container:nth-child(2n+2)/*every other container in allContent*/{
 	border-bottom: 2px solid gray;
 	border-top: 2px solid gray;
 }
@@ -62,8 +62,7 @@ a.print:after{
 	background: url(../images/print.png) no-repeat;
 }
 
-a.btn{
-	width: 100%;
-	margin: 2em auto;
-
+a.btn/*auto not working :( */{
+	width: 20%;
+	margin: 2em 40%;
 }
