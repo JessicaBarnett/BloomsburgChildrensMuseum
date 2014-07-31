@@ -1,0 +1,120 @@
+/*-----HEADER------*/
+
+body{
+	background: url(../images/StarBackground.svg) repeat rgb(255, 201, 80);
+	font-size: 16px;
+	font-family: "margarine";
+	font-style: bold;
+	color: rgb(253, 180, 38);
+}
+
+header, footer{
+	background-color: rgb(59, 98, 237);
+	width: 100%;
+}
+
+nav, h1, h2, h3, h4, h5{
+	font-size: 2rem;
+	font-family: "Chelsea Market";
+}
+
+header{
+	height: 5rem;
+	margin-top: 1rem;
+}
+
+.logo {
+	position: absolute;
+	width: 25%;
+	height: auto;
+	top: -.5rem;
+	left: 1.5rem;
+}
+
+nav{
+	float: right;
+	width: 68%;
+	margin-top: 1rem;
+	line-height: 1rem;
+}
+
+nav ul li a{
+	display: inline-block;
+	width: 100%;
+	height: 3.2rem;
+	text-decoration: none;
+	color: white;
+}
+
+nav ul li{
+	display: block;
+	color: white;
+	float: left;
+	width: 23%;
+	height: 3.2rem;
+	padding-top: 1rem;
+	text-align: center;
+	-o-transition: all .3s ease-in;
+	-moz-transition: all .3s ease-in;
+	-webkit-transition: all .3s ease-in;
+	transtion: all .3s ease-in;
+}
+
+nav ul li:nth-of-type(1){
+	border-radius: 10px 0  0 10px;
+	background-color: rgb(255, 167, 27);
+}
+
+nav ul li:nth-of-type(2){
+	background-color: rgb(179, 96, 239);
+}
+
+nav ul li:nth-of-type(3){
+	background-color: rgb(94, 141, 247);
+}
+
+nav ul li:nth-of-type(4){
+	border-radius: 0 10px 10px 0;
+	background-color: rgb(247, 87, 87);
+}
+
+nav ul li:nth-of-type(1):hover{ 
+	background-color: rgb(255, 199, 110)
+}
+
+nav ul li:nth-of-type(2):hover{
+	background-color: rgb(199, 146, 238);
+}
+
+nav ul li:nth-of-type(3):hover{
+	background-color: rgb(151, 181, 248);
+}
+nav ul li:nth-of-type(4):hover{
+	background-color: rgb(248, 159, 159);
+}
+
+/*-------END HEADER-------*/
+
+/*-------FOOTER---------*/
+
+footer {
+	display: block;
+	margin-top: 100px;
+	height: 18rem;
+	color: white;
+	font-size: 1.5rem;
+}
+
+.address{
+	height: 13rem;
+	line-height: 2rem;
+	padding-top: 2rem;
+	background-color: rgb(102, 186, 242);
+}
+.copyright{
+	height: 5rem;
+	padding-top: 2rem;
+}
+
+
+/*-------END FOOTER----------*/
