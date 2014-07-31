@@ -1,11 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Margarine|ABeeZee);/*|Englebert|Chelsea+Market*/
+
 /*-----HEADER------*/
 
 body{
 	background: url(../images/StarBackground.svg) repeat rgb(255, 201, 80);
 	font-size: 16px;
-	font-family: "margarine";
+	font-family: "ABeeZee";
 	font-style: bold;
-	color: rgb(253, 180, 38);
+	color: rgb(95, 95, 95);
 }
 
 header, footer{
@@ -13,10 +15,11 @@ header, footer{
 	width: 100%;
 }
 
-nav, h1, h2, h3, h4, h5{
-	font-size: 2rem;
-	font-family: "Chelsea Market";
+nav, footer{
+	font-size: 1.8rem;
+	font-family: "Margarine";
 }
+
 
 header{
 	height: 5rem;
@@ -28,17 +31,17 @@ header{
 	width: 25%;
 	height: auto;
 	top: -.5rem;
-	left: 1.5rem;
+	left: .8rem;
 }
 
 nav{
 	float: right;
-	width: 68%;
+	width: 77%;
 	margin-top: 1rem;
 	line-height: 1rem;
 }
 
-nav ul li a{
+nav ul li a {
 	display: inline-block;
 	width: 100%;
 	height: 3.2rem;
@@ -46,18 +49,18 @@ nav ul li a{
 	color: white;
 }
 
-nav ul li{
+nav ul li, a.btn{
 	display: block;
 	color: white;
 	float: left;
-	width: 23%;
+	width: 16%;
 	height: 3.2rem;
 	padding-top: 1rem;
 	text-align: center;
-	-o-transition: all .3s ease-in;
-	-moz-transition: all .3s ease-in;
-	-webkit-transition: all .3s ease-in;
-	transtion: all .3s ease-in;
+	-o-transition: all .2s ease-in;
+	-moz-transition: all .2s ease-in;
+	-webkit-transition: all .2s ease-in;
+	transtion: all .2s ease-in;
 }
 
 nav ul li:nth-of-type(1){
@@ -70,12 +73,23 @@ nav ul li:nth-of-type(2){
 }
 
 nav ul li:nth-of-type(3){
-	background-color: rgb(94, 141, 247);
+	background-color: rgb(104, 222, 80);
 }
 
 nav ul li:nth-of-type(4){
-	border-radius: 0 10px 10px 0;
 	background-color: rgb(247, 87, 87);
+	font-size: 1.6rem;
+}
+
+nav ul li:nth-of-type(5){
+	background-color: rgb(255, 253, 67);
+	font-size: 1.6rem;
+}
+
+nav ul li:nth-of-type(6){
+	border-radius: 0 10px 10px 0;
+	background-color: rgb(255, 73, 246);
+	font-size: 1.6rem;
 }
 
 nav ul li:nth-of-type(1):hover{ 
@@ -87,34 +101,221 @@ nav ul li:nth-of-type(2):hover{
 }
 
 nav ul li:nth-of-type(3):hover{
-	background-color: rgb(151, 181, 248);
+	background-color: rgb(184, 254, 170);
 }
 nav ul li:nth-of-type(4):hover{
 	background-color: rgb(248, 159, 159);
 }
 
+nav ul li:nth-of-type(5):hover{
+	background-color: rgb(251, 250, 163);
+}
+nav ul li:nth-of-type(6):hover{
+	background-color: rgb(255, 142, 249);
+}
+
 /*-------END HEADER-------*/
+
+/*-------CONTAINER STYLE-------*/
+
+#allContent.container, figure, figure img, h1{
+	border-radius: 12px;
+}
+
+#allContent.container {
+	margin: 2rem auto;
+	padding: .8rem 1rem 1rem 1rem;
+	padding-bottom: 3rem;
+	background-color: white;
+}
+
+/*-------END CONTAINER STYLE------*/
+
+/*--------BODY FONT STYLES--------*/
+
+h1, h2, h3, h4, h5 {
+	font-family: "margarine";
+	/*font-style: bold;*/
+	font-size: 2rem;
+	letter-spacing:.25rem;
+	color: rgb(253, 180, 38);
+}
+
+.contentHead h1{
+	background-color:  rgb(253, 180, 38);
+	padding: 1%;
+	font-size: 3rem;
+	color: white;
+	text-align: center;
+}
+
+
+p {
+	line-height: 1.25rem;
+	margin: 1rem;
+}
+
+/*--------END BODY FONT STYLES--------*/
+
+/*-------FIGURE STYLES-------*/
+
+#allContent figure{
+	background-color: rgb(253, 180, 38);
+	-o-transition: all .2s ease-in;
+	-moz-transition: all .2s ease-in;
+	-webkit-transition: all .2s ease-in;
+	transtion: all .2s ease-in;
+}
+
+#allContent figure img {
+	width: 80%;
+	margin: 2.3rem 10% 0 10%;
+}
+
+#allContent figure.noCaption img{
+	margin-bottom: 2.3rem;
+}
+
+#allContent figure.noCaption {
+	margin-bottom: 1rem;
+}
+
+#allContent figcaption {
+	color: white;
+	text-align: center;
+	font-size: 3rem;
+	line-height: 5rem;
+}
+
+#allContent>.container
+{
+	margin-top: 3rem;
+}
+
+#allContent figure figcaption h1, 
+#allContent figure figcaption h2, 
+#allContent figure figcaption h3, 
+#allContent figure figcaption h4, 
+#allContent figure figcaption h5 {
+	font-family: margarine;
+	letter-spacing:.1rem;
+	font-size: 2.5rem;
+	color: white;
+}
+
+#allContent a figure:hover{
+	background-color: rgb(255, 201, 80);
+}
+
+/*-------END FIGURE STYLES------*/
+/*----------BUTTON STYLE--------*/
+a.btn {
+	background-color: rgb(104, 222, 80);
+	border-radius: 15px;
+	text-decoration: none;
+	font-size: 1.25rem;
+}
+
+a.btn:hover{
+	background-color: rgb(184, 254, 170);
+}
+
+/*-------END BUTTON STYLE-------*/
+
+/*----------FORM STYLE--------*/
+
+input[type="text"]{
+	width: 80%;
+	height: 3rem;
+	border: 3px solid black;
+	border-radius: 15px;
+	font-size: 2rem;
+	float: right;
+}
+
+input[type="radio"]{
+	float: left;
+}
+
+label{
+	float: left;
+	font-size: 2rem;
+	margin-right: 3%;
+}
+
+fieldset{
+	display: block;   
+}
+
+#city, #zip, #state{
+	width: 78%;
+	float: left;
+}
+
+#state{
+	width: 50%;
+}
+
+/*-------END FORM STYLE-------*/
 
 /*-------FOOTER---------*/
 
 footer {
 	display: block;
-	margin-top: 100px;
-	height: 18rem;
+	height: 22rem;
+	font-size: 2rem;
 	color: white;
 	font-size: 1.5rem;
+	letter-spacing:.05rem;
 }
 
-.address{
+.footerTop{
 	height: 13rem;
 	line-height: 2rem;
-	padding-top: 2rem;
 	background-color: rgb(102, 186, 242);
 }
-.copyright{
-	height: 5rem;
-	padding-top: 2rem;
+
+.directions{
+	padding-top: 1.5rem;
 }
+.address{
+	width: 45%;
+	float: left;
+}
+
+.map{
+	background-color: linen;
+	color: gray;
+	padding: 5%;
+	width: 40%;
+	height: 10rem;
+	float: left;
+}
+
+.social{
+	padding-top: 1rem;
+}
+
+.social, .affiliates{
+	display: inline-block;
+	text-align: right;
+}
+
+.social img{
+	width: 15%;
+	height: auto;
+}
+
+.affiliates img {
+	padding-top: .5rem;
+	height: auto;
+	width: 15%;
+}
+
+.copyright{
+	padding-top: 3rem;
+}
+
 
 
 /*-------END FOOTER----------*/

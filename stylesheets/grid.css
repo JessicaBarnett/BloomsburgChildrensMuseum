@@ -19,17 +19,14 @@ margin will add to it*/
 											  margin-right: 2%; 
 											  float: left;      } 
 
+.container .columns.inverse				{ float: right;}
+
 .columns.alpha								{ margin-left: 1%;  } 
 .columns.omega								{ margin-right: 1%; }	
 
-/*for a block that will be floated and have width, but will not be 
-part of a row of 6 columns.  May have text wraping around it*/
-
-.columns.standalone							{ margin: 0%;		}	
-
 /*ideally every floated element (with column class) will be nested
 in a container, and that container is self-clearing.  
-But enything that is floated/not in a container, can use .group*/							
+But enything that is floated/not in a container can use .group*/							
 .container:after, .group					{ content: ""; 
 											  display: table;
 											  clear: both;      } 
@@ -37,7 +34,7 @@ But enything that is floated/not in a container, can use .group*/
 
 .container .one.columns                     { width: 13%;  	}
 .container .two.columns                     { width: 30%;  	}
-.container .three.columns                   { width: 47%;  	}
+.container .three.columns                   { width: 47%;  	} 
 .container .four.columns                    { width: 64%;  	}
 .container .five.columns                    { width: 81%;  	}
 .container .six.columns                     { width: 98%;   }
