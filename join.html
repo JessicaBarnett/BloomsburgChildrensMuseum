@@ -6,6 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
 		<link rel="stylesheet" type="text/css" href="stylesheets/grid.css">
 		<link rel="stylesheet" type="text/css" href="stylesheets/sitestyle.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/join.css">
+
 	</head>
 	<body>
 		<header class="group">
@@ -25,100 +27,162 @@
 		</header>
 
 		<div id="allContent" class="container">
-
+			
 			<div class="contentHead container">
 				<h1 class="six columns alpha omega">Join the Museum Family!</h1>
 			</div>
-			<div class="container">
-				<fieldset class="six columns alpha omega">
-					<label for="name">Name</label>
-					<input type="text" name="name" id="name" placeholder="Awesome Museum Supporter" autofocus>
-				</fieldset>
-			</div>
 
-			<div class="container">
-				<fieldset class="six columns alpha omega">
-					<label for="address1">Address</label>
-					<input type="text" name="address1" id="address1" placeholder="123 Awesome road">
-				</fieldset>
-			</div>
+			<div id="memberAddress" class="container">
+				<div class="container">
+					<fieldset class="six columns alpha omega">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" placeholder="Awesome Museum Supporter" required>
+					</fieldset>
+				</div>
 
-			<div class="container">
-				<fieldset class="six columns alpha omega">
-					<label for="address2">Address 2</label>
-					<input type="text" name="address2" id="address2" placeholder="apartment 7b">
-				</fieldset>
+				<div class="container">
+					<fieldset class="six columns alpha omega">
+						<label for="address1">Address</label>
+						<input type="text" name="address1" id="address1" placeholder="123 Awesome road" required>
+					</fieldset>
+				</div>
 
-			</div>
+				<div class="container">
+					<fieldset class="six columns alpha omega">
+						<label for="address2">Address 2</label>
+						<input type="text" name="address2" id="address2" placeholder="apartment 7b">
+					</fieldset>
 
-			<div class="container">
-				<fieldset class="two columns alpha">
-					<label for="city">City</label>
-					<input type="text" name="city" id="city" placeholder="Bloomsburg">
-				</fieldset>
+				</div>
 
-
-				<fieldset class="one columns">
-					<label for="state">State</label>
-					<input type="text" name="state" id="state" placeholder="PA">
-				</fieldset>
-
-				<fieldset class="one columns omega">
-					<label for="Zip">Zip</label>
-					<input type="text" name="zip" id="zip" placeholder="12345">
-				</fieldset>
-			</div>
-
-			<hr>
+				<div class="container">
+					<fieldset class="two columns alpha">
+						<label for="city">City</label>
+						<input type="text" name="city" id="city" placeholder="Bloomsburg" required>
+					</fieldset>
 
 
-			<div class="container">
-				<p class="three columns alpha">Monthly Dues are only $10 per month!  Please choose a payment Method.</p>
-				<div class="three columns omega">
+					<fieldset class="two columns">
+						<label for="state" >State</label>
+						<input type="text" name="state" id="state" list="states" placeholder="PA" required>
+						<datalist id="states">
+							<option value="AL"><option value="AK"><option value="AZ"><option value="AR"><option value="CA"><option value="CO"><option value="CT"><option value="DE"><option value="FL"><option value="GA"><option value="HI"><option value="ID"><option value="IL"><option value="IN"><option value="IA"><option value="KS"><option value="KY"><option value="LA"><option value="MA"><option value="ME"><option value="MD"><option value="MI"><option value="MN"><option value="MS"><option value="MO"><option value="MT"><option value="NE"><option value="NV"><option value="NH"><option value="NJ"><option value="NM"><option value="NY"><option value="NC"><option value="ND"><option value="OH"><option value="OK"><option value="OR"><option value="PA"><option value="RI"><option value="SC"><option value="SD"><option value="TN"><option value="TX"><option value="UT"><option value="VT"><option value="VA"><option value="WA"><option value="WV"><option value="WI"><option value="WY">
+						</datalist>
+					</fieldset>
+
+					<fieldset class="two columns omega">
+						<label for="Zip">Zip</label>
+						<input type="text" name="zip" id="zip" placeholder="12345" required>
+					</fieldset>
+				</div>
+
+			</div> <!--ends memberAddress-->
+
+			<div id="recycleAddress" class="container">
+				<p class="three columns alpha">Use address above as Billing Address?</p>
+				<div class="three columns omega radio">
 					<fieldset>
-						<input type="radio" name="payMethod" value="radio" id="useCheck">
-						<label for="useCheck">Check</label>
+						<input type="radio" name="recycleAddress" value="radio" id="sameAddress" onclick="toggleBillAddress()">
+						<label for="sameAddress">Yes</label>
 					</fieldset>
 					<fieldset>
-						<input type="radio" name="payMethod" value="radio" id="useCard">
-						<label for="useCard">Card</label>
+						<input type="radio" name="recycleAddress" value="radio" id="diffAddress" onclick="toggleBillAddress()">
+						<label for="diffAddress">No</label>
 					</fieldset>
 				</div>
 			</div>
 
-				<fieldset>
-					<label for="cardName">Cardholder Name</label>
-					<input type="text" name="cardName" id="cardName">
-				</fieldset>
-				<fieldset>
-					<label for="cardAddress">Cardholder Address</label>
-					<input type="text" name="cardAddress" id="cardAddress">
-				</fieldset>
-				<fieldset>
-					<label for="ccv">CCV</label>
-					<input type="text" name="ccv" id="ccv">
-				</fieldset>
+			<div id="billingAddress" class="container">
 
-				<fieldset>
-					<p>Please Print this form and mail to:</p>
-					<p>Bloomsburg Children's Museum</p>
-					<p>Attn: Membership Coordinator</p>
-					<p>301 Sunnydale Lane</p>
-					<p>Bloomsburg PA, 19103</p>
-					<a href="#">
-						<img src="images/print.png" alt="print icon">
-					</a>
+				<div class="container">
+					<fieldset class="six columns alpha omega">
+						<label for="billAddress1">Billing Address</label>
+						<input type="text" name="billAddress1" id="billAddress1">
+					</fieldset>
+				</div>
 
-				</fieldset>
-			</div><!--ends contentOne-->
+				<div class="container">
+					<fieldset class="six columns alpha omega">
+						<label for="billAddress2">Billing Address 2</label>
+						<input type="text" name="billAddress2" id="billAddress2">
+					</fieldset>
 
-			<div class="contentTwo container">
+				</div>
 
-			</div><!--ends contentTwo-->
+				<div class="container">
+					<fieldset class="two columns alpha">
+						<label for="billCity">City</label>
+						<input type="text" name="billCity" id="billCity">
+					</fieldset>
 
-			<div class="contentThree container">
 
-			</div><!--ends contentThree-->
+					<fieldset class="two columns">
+						<label for="billState" >State</label>
+						<input type="text" name="billState" id="billState" list="states">
+					</fieldset>
+
+					<fieldset class="two columns omega">
+						<label for="billZip">Zip</label>
+						<input type="text" name="billZip" id="billZip">
+					</fieldset>
+				</div>
+			</div><!--ends billingAddress-->
+
+			<div id="paymentMethod" class="container">
+				<p class="three columns alpha">Monthly Dues are only $10 per month!  Please choose a payment Method.</p>
+				<div class="three columns radio omega">
+					<fieldset>
+						<input type="radio" name="payMethod" value="radio" id="useCheck" onclick="togglePayMethod()">
+						<label for="useCheck">Check</label>
+					</fieldset>
+					<fieldset>
+						<input type="radio" name="payMethod" value="radio" id="useCard" onclick="togglePayMethod()">
+						<label for="useCard">Card</label>
+					</fieldset>
+				</div>
+			</div><!--ends paymentMethod-->
+
+			<div id="cardInfo" class="container">
+				<div class="container">
+					<fieldset class="six columns alpha omega">
+						<label for="cardName">Cardholder Name</label>
+						<input type="text" name="cardName" id="cardName">
+					</fieldset>
+				</div>
+				<div class="container">
+					<fieldset class="four columns alpha">
+						<label for="cardNumber">Card Number</label>
+						<input type="text" name="cardNumber" id="cardNumber">
+					</fieldset>
+					<fieldset class="two columns omega">
+						<label for="ccv">CCV</label>
+						<input type="text" name="ccv" id="ccv">
+					</fieldset>
+				</div>
+				<div class="six columns alpha omega">
+					<a href="#" class="btn">Submit</a>
+				</div>
+			</div><!--ends cardInfo--> 
+
+			<div id="checkInfo" class="container">
+				<div class="two columns alpha">
+					<p>Please <a class="print" href="#">Print</a> this form and check with check to:</p>
+				</div>
+				<div class="four columns omega">
+					<p><em>Bloomsburg Children's Museum</em></p>
+					<p><em>Attn: Membership Coordinator</em></p>
+					<p><em>301 Sunnydale Lane</em></p>
+					<p><em>Bloomsburg PA, 19103</em></p>
+				</div>
+			</div><!--ends checkingDirectionse-->
+
+			<div id="thankYouMessage" class="container">
+				<div class="six columns alpha omega">
+					<p><em>You will recieve your welcome packet in  2 to 3 weeks.</em></p>
+					<p><em>Thank you for Supporting the Museum!</em></p>
+				</div>
+			</div><!--ends thankYouMessage-->
+
 		</div>  <!-- ends AllContent-->
 
 
@@ -160,7 +224,7 @@
 				</div>
 			</section>
 		</footer>
-
+		<script type="text/javascript" src="script/join.js"></script>
 	</body>
 
 

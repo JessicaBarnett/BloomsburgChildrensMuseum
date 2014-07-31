@@ -8,6 +8,7 @@ body{
 	font-family: "ABeeZee";
 	font-style: bold;
 	color: rgb(95, 95, 95);
+	overflow-x: hidden;
 }
 
 header, footer{
@@ -29,8 +30,9 @@ header{
 .logo {
 	position: absolute;
 	width: 25%;
+	max-width: 350px;
 	height: auto;
-	top: -.5rem;
+	top: -1rem;
 	left: .8rem;
 }
 
@@ -60,7 +62,7 @@ nav ul li, a.btn{
 	-o-transition: all .2s ease-in;
 	-moz-transition: all .2s ease-in;
 	-webkit-transition: all .2s ease-in;
-	transtion: all .2s ease-in;
+	transition: all .2s ease-in;
 }
 
 nav ul li:nth-of-type(1){
@@ -133,16 +135,15 @@ nav ul li:nth-of-type(6):hover{
 
 /*--------BODY FONT STYLES--------*/
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, em {
 	font-family: "margarine";
-	/*font-style: bold;*/
 	font-size: 2rem;
 	letter-spacing:.25rem;
 	color: rgb(253, 180, 38);
 }
 
 .contentHead h1{
-	background-color:  rgb(253, 180, 38);
+	background-color: rgb(253, 180, 38);
 	padding: 1%;
 	font-size: 3rem;
 	color: white;
@@ -164,7 +165,7 @@ p {
 	-o-transition: all .2s ease-in;
 	-moz-transition: all .2s ease-in;
 	-webkit-transition: all .2s ease-in;
-	transtion: all .2s ease-in;
+	transition: all .2s ease-in;
 }
 
 #allContent figure img {
@@ -231,6 +232,7 @@ input[type="text"]{
 	border-radius: 15px;
 	font-size: 2rem;
 	float: right;
+	padding: 0 .5rem;
 }
 
 input[type="radio"]{
@@ -245,15 +247,13 @@ label{
 
 fieldset{
 	display: block;   
+	margin: 1.5rem 0;
 }
 
-#city, #zip, #state{
-	width: 78%;
+.radio fieldset{
+	display: block;
 	float: left;
-}
-
-#state{
-	width: 50%;
+	width: 25%;
 }
 
 /*-------END FORM STYLE-------*/
@@ -278,6 +278,7 @@ footer {
 .directions{
 	padding-top: 1.5rem;
 }
+
 .address{
 	width: 45%;
 	float: left;
